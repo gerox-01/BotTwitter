@@ -15,4 +15,7 @@ Si deseas hacer lo mismo que yo, sigue los siguientes pasos:
 
 - Empieza a experimentar y aprender por tu cuenta  😎💙
 
+Además podrás ver una grafica que te muestra los tweets por usuario:
+
+![Grafica de Tweets por usuario](https://www.notion.so/gerox/Curso-de-Python-Intermedio-1ef77c1f88e543b4be603d90240787dc#2e2648d89afa4c58ad5e373b2a3b6a3b)
 

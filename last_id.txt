@@ -1,1 +1,25 @@
 1492270371277520910
+
+
+if tweet.favorited is False:
+            # try:
+            print('Replying...')
+            api.update_status(status=random.choice(
+                reply_message),  in_reply_to_status_id=tweet.id, auto_populate_reply_metadata=True)
+            replies.append(tweet)
+
+            with open('replies_clean.csv', 'a', encoding="utf-8") as f:
+                csv_writer = csv.DictWriter(f, fieldnames=('user', 'text'))
+                # csv_writer.writeheader()
+                for tweet in replies:
+                    row = {'user': tweet.user.screen_name,
+                           'text': tweet.text.replace('\n', ' ')}
+                    csv_writer.writerow(row)
+            tweet.favorite()
+            print('Favorited')
+            # except tweepy.TweepyException as e:
+            #     print(e.reason)
+            # finally:
+            #     print('Done')
+        else:
+            print('Already favorited and reply')
